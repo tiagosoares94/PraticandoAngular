@@ -1,0 +1,22 @@
+<div *ngIf="service.lista.length > 0">
+	<table class="table table-bordered table-striped">
+		<thead class="text-center">
+			<tr>
+				<th scope="col">Marca</th>
+				<th scope="col">Modelo</th>
+				<th scope="col">Valor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let c of service.lista">
+				<td>{{c.marca}}</td>
+				<td>{{c.modelo}}</td>
+				<td>{{getFormattedPrice(c.valor)}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<p class="float-right">Total: {{service.lista.length}}</p>
+</div>
+<div *ngIf="service.lista.length === 0">
+  <h6 class="text-danger">Nenhum Veículo Cadastrado</h6>
+</div>

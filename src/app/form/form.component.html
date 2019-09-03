@@ -1,0 +1,21 @@
+<h1 style="font-size: 26px" class="text-primary text-uppercase">Cadastro de Veículos</h1>
+<hr>
+
+<form (submit)="salvar()" #myForm="ngForm">
+	<div class="form-group jumbotron">
+    
+    <label class="font-weight-bold">Marca</label><br>
+    <select [(ngModel)]="veiculo.marca" name="my_marca" class="form-control" required>
+      <option *ngFor="let c of marcas; let i = index">{{marcas[i]}}</option>
+    </select>
+    
+    <label class="mt-3 font-weight-bold">Modelo</label>
+    <input [(ngModel)]="veiculo.modelo" #limpar #modeloInput="ngModel" name="my_modelo" type="text" class="form-control" required>
+    
+    <label class="mt-3 font-weight-bold">Valor</label>
+    <input [(ngModel)]="veiculo.valor" #limpar #valorInput="ngModel" name="my_valor" type="text" class="form-control text-right" required>
+
+    <button type="submit" [disabled]="!myForm.valid" class="mt-4 mr-3 btn btn-secondary">Salvar</button>
+    <button (click)="myForm.reset()" type="button" class="mt-4 btn btn-secondary">Limpar</button>
+  </div>
+</form>
