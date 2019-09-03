@@ -2,8 +2,11 @@
 
 Prática para a disciplina Programação de Scripts, ministrada pelo profº Arley Silva.
 
+## O que é?
 
-## Built with
+Dois componentes interagindo entre si através de um serviço.
+
+## Desenvolvido com:
 
 * Angular 8
 * Bootstrap 4
